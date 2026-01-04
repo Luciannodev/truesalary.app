@@ -1,124 +1,527 @@
-🔐 Política de Privacidade – TrueSalary
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de Privacidade - TrueSalary</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;650&family=Space+Grotesk:wght@400;500;600&display=swap");
 
-Última atualização: 03 de janeiro de 2026
+      :root {
+        --bg-top: #f6efe6;
+        --bg-bottom: #eef5f2;
+        --card-bg: #fffdf8;
+        --card-alt: #f5efe4;
+        --text: #1f2a24;
+        --muted: #5c6d64;
+        --accent: #0d6a5c;
+        --accent-2: #2e6b55;
+        --border: #e6e0d6;
+        --shadow: 0 18px 40px rgba(22, 34, 28, 0.12);
+        --shadow-soft: 0 10px 22px rgba(22, 34, 28, 0.08);
+        --note-bg: #eaf3ee;
+        --chip-bg: #eef2ee;
+        --radius-lg: 28px;
+        --radius-md: 20px;
+      }
 
-O TrueSalary respeita a privacidade dos seus usuários e está comprometido em proteger os dados pessoais coletados durante o uso do aplicativo. Esta Política de Privacidade descreve como as informações são coletadas, usadas e protegidas.
+      * {
+        box-sizing: border-box;
+      }
 
-1. Informações que coletamos
+      body {
+        margin: 0;
+        min-height: 100%;
+        font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+            1200px 600px at 8% -10%,
+            #f7e7d3 0%,
+            rgba(247, 231, 211, 0) 60%
+          ),
+          radial-gradient(
+            900px 520px at 108% 8%,
+            #d7efe6 0%,
+            rgba(215, 239, 230, 0) 55%
+          ),
+          linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+        line-height: 1.6;
+      }
 
-O TrueSalary pode coletar as seguintes informações:
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
 
-a) Informações fornecidas pelo usuário
+      a:hover {
+        text-decoration: underline;
+      }
 
-Endereço de e-mail
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: clamp(24px, 4vw, 56px);
+      }
 
-Nome (quando fornecido via login social)
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(26px, 5vw, 48px);
+        border-radius: var(--radius-lg);
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
 
-Dados inseridos pelo próprio usuário para simulações financeiras (como salários, benefícios e impostos)
+      .hero::before {
+        content: "";
+        position: absolute;
+        right: -60px;
+        top: -70px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(13, 106, 92, 0.22),
+          rgba(13, 106, 92, 0)
+        );
+      }
 
-Esses dados são usados exclusivamente para funcionamento do app e não representam informações financeiras reais obrigatórias.
+      .eyebrow {
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
 
-b) Informações coletadas automaticamente
+      h1 {
+        margin: 0 0 8px;
+        font-family: "Fraunces", "Times New Roman", serif;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        line-height: 1.15;
+      }
 
-Podemos coletar automaticamente:
+      .updated {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
 
-Informações do dispositivo (modelo, sistema operacional, idioma)
+      .lead {
+        margin: 16px 0 0;
+        max-width: 680px;
+        font-size: 1.05rem;
+      }
 
-Identificadores anônimos de uso
+      .toc {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      }
 
-Dados de interação com o aplicativo
+      .toc a {
+        background: var(--chip-bg);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        border: 1px solid transparent;
+        transition: border-color 0.2s ease, transform 0.2s ease;
+      }
 
-Essas informações são utilizadas para:
+      .toc a:hover {
+        border-color: var(--border);
+        transform: translateY(-1px);
+      }
 
-Melhorar a experiência do usuário
+      main {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
 
-Corrigir erros
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: clamp(20px, 3vw, 32px);
+        box-shadow: var(--shadow-soft);
+        animation: rise 0.6s ease both;
+      }
 
-Analisar desempenho e estabilidade
+      .card h2 {
+        margin: 0 0 12px;
+        font-family: "Fraunces", "Times New Roman", serif;
+        font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+      }
 
-2. Uso de serviços de terceiros
+      .card h3 {
+        margin: 18px 0 6px;
+        font-size: 1.05rem;
+        color: var(--accent-2);
+      }
 
-O TrueSalary utiliza serviços de terceiros que podem coletar informações conforme suas próprias políticas:
+      .list {
+        padding-left: 1.1em;
+        margin: 0 0 12px;
+      }
 
-🔹 Firebase (Google)
+      .list li {
+        margin: 0.4em 0;
+      }
 
-Utilizado para:
+      .note {
+        margin: 12px 0 0;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: var(--note-bg);
+        border-left: 4px solid var(--accent);
+      }
 
-Autenticação de usuários
+      .service-grid {
+        margin-top: 16px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
 
-Análise de uso
+      .service {
+        padding: 16px;
+        border-radius: 16px;
+        background: var(--card-alt);
+        border: 1px solid var(--border);
+      }
 
-Relatórios de falhas (Crashlytics)
+      .service h3 {
+        margin-top: 0;
+      }
 
-Política do Firebase:
-https://policies.google.com/privacy
+      .divider {
+        height: 1px;
+        margin: 12px 0 0;
+        background: var(--border);
+      }
 
-🔹 Google AdMob
+      footer {
+        margin-top: 32px;
+        padding: 20px 24px;
+        border-radius: var(--radius-md);
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: var(--shadow-soft);
+      }
 
-Utilizado para exibição de anúncios no aplicativo.
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
 
-O AdMob pode coletar identificadores de publicidade para personalização ou medição de anúncios, conforme permitido pelas configurações do dispositivo do usuário.
+      .contact span {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
 
-Política do Google AdMob:
-https://policies.google.com/technologies/ads
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--chip-bg);
+        color: var(--text);
+        font-size: 0.9rem;
+      }
 
-🔹 Google Play Billing
+      section {
+        scroll-margin-top: 20px;
+      }
 
-Utilizado para processar assinaturas e compras dentro do aplicativo.
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-As transações são processadas diretamente pelo Google Play. O TrueSalary não armazena dados de pagamento, como números de cartão de crédito.
+      .card:nth-of-type(1) {
+        animation-delay: 0.02s;
+      }
+      .card:nth-of-type(2) {
+        animation-delay: 0.05s;
+      }
+      .card:nth-of-type(3) {
+        animation-delay: 0.08s;
+      }
+      .card:nth-of-type(4) {
+        animation-delay: 0.11s;
+      }
+      .card:nth-of-type(5) {
+        animation-delay: 0.14s;
+      }
+      .card:nth-of-type(6) {
+        animation-delay: 0.17s;
+      }
+      .card:nth-of-type(7) {
+        animation-delay: 0.2s;
+      }
+      .card:nth-of-type(8) {
+        animation-delay: 0.23s;
+      }
+      .card:nth-of-type(9) {
+        animation-delay: 0.26s;
+      }
 
-3. Como usamos as informações
+      @media (max-width: 720px) {
+        .toc {
+          grid-template-columns: 1fr;
+        }
 
-As informações coletadas são utilizadas para:
+        footer {
+          align-items: flex-start;
+        }
+      }
 
-Permitir login e autenticação
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <p class="eyebrow">TrueSalary</p>
+        <h1>Política de Privacidade</h1>
+        <p class="updated">Última atualização: 03 de janeiro de 2026</p>
+        <p class="lead">
+          O TrueSalary respeita a privacidade dos seus usuários e está
+          comprometido em proteger os dados pessoais coletados durante o uso do
+          aplicativo. Esta Política de Privacidade descreve como as informações
+          são coletadas, usadas e protegidas.
+        </p>
+        <nav class="toc" aria-label="Seções desta política">
+          <a href="#coleta">Informações coletadas</a>
+          <a href="#terceiros">Serviços de terceiros</a>
+          <a href="#uso">Como usamos</a>
+          <a href="#estimativas">Valores estimados</a>
+          <a href="#compartilhamento">Compartilhamento</a>
+          <a href="#direitos">Direitos do usuário</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </header>
 
-Fornecer funcionalidades do aplicativo
+      <main>
+        <section class="card" id="coleta">
+          <h2>1. Informações que coletamos</h2>
+          <h3>a) Informações fornecidas pelo usuário</h3>
+          <ul class="list">
+            <li>Endereço de e-mail.</li>
+            <li>Nome (quando fornecido via login social).</li>
+            <li>
+              Dados inseridos pelo próprio usuário para simulações financeiras
+              (como salários, benefícios e impostos).
+            </li>
+          </ul>
+          <p class="note">
+            Esses dados são usados exclusivamente para funcionamento do app e
+            não representam informações financeiras reais obrigatórias.
+          </p>
+          <div class="divider"></div>
+          <h3>b) Informações coletadas automaticamente</h3>
+          <ul class="list">
+            <li>Informações do dispositivo (modelo, sistema operacional, idioma).</li>
+            <li>Identificadores anônimos de uso.</li>
+            <li>Dados de interação com o aplicativo.</li>
+          </ul>
+          <p>Essas informações são utilizadas para:</p>
+          <ul class="list">
+            <li>Melhorar a experiência do usuário.</li>
+            <li>Corrigir erros.</li>
+            <li>Analisar desempenho e estabilidade.</li>
+          </ul>
+        </section>
 
-Exibir anúncios
+        <section class="card" id="terceiros">
+          <h2>2. Uso de serviços de terceiros</h2>
+          <p>
+            O TrueSalary utiliza serviços de terceiros que podem coletar
+            informações conforme suas próprias políticas:
+          </p>
+          <div class="service-grid">
+            <div class="service">
+              <h3>Firebase (Google)</h3>
+              <p>Utilizado para:</p>
+              <ul class="list">
+                <li>Autenticação de usuários.</li>
+                <li>Análise de uso.</li>
+                <li>Relatórios de falhas (Crashlytics).</li>
+              </ul>
+              <a href="https://policies.google.com/privacy" rel="noopener">
+                Política do Firebase
+              </a>
+            </div>
+            <div class="service">
+              <h3>Google AdMob</h3>
+              <p>Utilizado para exibição de anúncios no aplicativo.</p>
+              <p>
+                O AdMob pode coletar identificadores de publicidade para
+                personalização ou medição de anúncios, conforme permitido pelas
+                configurações do dispositivo do usuário.
+              </p>
+              <a href="https://policies.google.com/technologies/ads" rel="noopener">
+                Política do Google AdMob
+              </a>
+            </div>
+            <div class="service">
+              <h3>Google Play Billing</h3>
+              <p>Utilizado para processar assinaturas e compras no app.</p>
+              <p>
+                As transações são processadas diretamente pelo Google Play. O
+                TrueSalary não armazena dados de pagamento, como números de
+                cartão de crédito.
+              </p>
+            </div>
+          </div>
+        </section>
 
-Processar assinaturas
+        <section class="card" id="uso">
+          <h2>3. Como usamos as informações</h2>
+          <ul class="list">
+            <li>Permitir login e autenticação.</li>
+            <li>Fornecer funcionalidades do aplicativo.</li>
+            <li>Exibir anúncios.</li>
+            <li>Processar assinaturas.</li>
+            <li>Melhorar o desempenho e a estabilidade do app.</li>
+          </ul>
+        </section>
 
-Melhorar o desempenho e a estabilidade do app
+        <section class="card" id="estimativas">
+          <h2>4. Valores estimados e limitações</h2>
+          <p>
+            Os valores apresentados no TrueSalary são estimativas baseadas nas
+            informações fornecidas pelo usuário e nas regras vigentes aplicáveis
+            às simulações.
+          </p>
+          <p>
+            Esses resultados não devem ser interpretados como verdade absoluta
+            e não substituem análises contábeis, fiscais ou profissionais. O app
+            serve como referência para simulações e comparativos.
+          </p>
+        </section>
 
-4. Compartilhamento e uso de dados
+        <section class="card" id="compartilhamento">
+          <h2>5. Compartilhamento e uso de dados</h2>
+          <p>
+            O TrueSalary não vende, aluga ou compartilha dados pessoais
+            identificáveis dos usuários, como nome, e-mail, documentos ou
+            informações de contato.
+          </p>
+          <p>
+            Podemos utilizar dados anonimizados e agregados, que não permitem a
+            identificação de usuários individuais, para fins estatísticos,
+            analíticos, de pesquisa de mercado ou melhoria do serviço, incluindo
+            a geração de indicadores e comparativos salariais.
+          </p>
+          <p>
+            Esses dados são tratados de forma a garantir a privacidade dos
+            usuários e podem ser utilizados para fins comerciais ou estratégicos,
+            desde que não contenham informações pessoais identificáveis.
+          </p>
+        </section>
 
-O TrueSalary não vende, aluga ou compartilha dados pessoais identificáveis dos usuários, como nome, e-mail, documentos ou informações de contato.
+        <section class="card" id="seguranca">
+          <h2>6. Segurança dos dados</h2>
+          <p>
+            Adotamos medidas técnicas e organizacionais para proteger os dados
+            dos usuários contra acesso não autorizado, perda ou uso indevido.
+          </p>
+          <p>
+            Apesar disso, nenhum sistema é completamente seguro, e não podemos
+            garantir segurança absoluta.
+          </p>
+        </section>
 
-Podemos utilizar dados anonimizados e agregados, que não permitem a identificação de usuários individuais, para fins estatísticos, analíticos, de pesquisa de mercado ou melhoria do serviço, incluindo a geração de indicadores e comparativos salariais.
+        <section class="card" id="direitos">
+          <h2>7. Direitos do usuário</h2>
+          <p>O usuário pode:</p>
+          <ul class="list">
+            <li>Solicitar a exclusão de sua conta.</li>
+            <li>Solicitar a exclusão de dados associados.</li>
+            <li>Revogar consentimentos quando aplicável.</li>
+          </ul>
+          <p>
+            Solicitações podem ser feitas através do e-mail de contato abaixo.
+          </p>
+        </section>
 
-Esses dados são tratados de forma a garantir a privacidade dos usuários e podem ser utilizados para fins comerciais ou estratégicos, desde que não contenham informações pessoais identificáveis.
+        <section class="card" id="criancas">
+          <h2>8. Crianças</h2>
+          <p>
+            O TrueSalary não é destinado a menores de 13 anos. Não coletamos
+            intencionalmente dados de crianças.
+          </p>
+        </section>
 
-5. Segurança dos dados
+        <section class="card" id="alteracoes">
+          <h2>9. Alterações nesta política</h2>
+          <p>
+            Esta Política de Privacidade pode ser atualizada periodicamente.
+            Recomendamos que o usuário revise esta página regularmente.
+          </p>
+        </section>
+        <section class="card" id="contato">
+          <h2>10. Contato</h2>
+          <p>
+            Se você tiver dúvidas sobre esta Política de Privacidade ou sobre o
+            uso de seus dados, entre em contato:
+          </p>
+          <ul class="list">
+            <li>
+              E-mail:
+              <a href="mailto:gohorsebrazil@gmail.com">gohorsebrazil@gmail.com</a>
+            </li>
+            <li>
+              Site:
+              <a
+                href="https://lucianondev.github.io/gohorsebrazil.github.io/privacy-policy.html"
+                rel="noopener"
+              >
+                https://lucianondev.github.io/gohorsebrazil.github.io/privacy-policy.html
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
 
-Adotamos medidas técnicas e organizacionais para proteger os dados dos usuários contra acesso não autorizado, perda ou uso indevido.
-
-Apesar disso, nenhum sistema é completamente seguro, e não podemos garantir segurança absoluta.
-
-6. Direitos do usuário
-
-O usuário pode:
-
-Solicitar a exclusão de sua conta
-
-Solicitar a exclusão de dados associados
-
-Revogar consentimentos quando aplicável
-
-Solicitações podem ser feitas através do e-mail de contato abaixo.
-
-7. Crianças
-
-O TrueSalary não é destinado a menores de 13 anos. Não coletamos intencionalmente dados de crianças.
-
-8. Alterações nesta política
-
-Esta Política de Privacidade pode ser atualizada periodicamente. Recomendamos que o usuário revise esta página regularmente.
-
-9. Contato
-
-Se você tiver dúvidas sobre esta Política de Privacidade ou sobre o uso de seus dados, entre em contato:
-
-📧 E-mail: gohorsebrazil@gmail.com
-🌐 Site: https://lucianondev.github.io/gohorsebrazil.github.io/privacy-policy.html
+      <footer>
+        <div class="contact">
+          <strong>TrueSalary</strong>
+          <span>Política de Privacidade atualizada em 03/01/2026.</span>
+        </div>
+        <a
+          class="badge"
+          href="https://lucianondev.github.io/gohorsebrazil.github.io/privacy-policy.html"
+          rel="noopener"
+        >
+          Página pública da política
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>
